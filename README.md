@@ -17,6 +17,14 @@ I decided to simpletransformers library to accomplish my task, which is a transf
 Simple Transformer models are built with a particular Natural Language Processing (NLP) task in mind. Each such model comes equipped with features and functionality
 designed to best fit the task that they are intended to perform. The high-level process of using Simple Transformers models follows the same pattern.
 I used the roberta base model for binary text classification. The config I used were mostly the standard configuration of roberat base except for the following:
+train_args={
+    'output_dir': "/content/gdrive/MyDrive/outputs" ,
+    'best_model_dir': "/content/gdrive/MyDrive/outputs/best_model" ,
+    'reprocess_input_data': True,
+    'overwrite_output_dir': True,
+    'num_train_epochs': 20,
+    'no_save': True
+}
 
 # Results
 The results of my model on dev_set are:
